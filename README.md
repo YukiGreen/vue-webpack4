@@ -1,2 +1,1 @@
-# vue-webpack4
-使用webpack4构建vue基础应用
+# 使用webpack4搭建的vue基础项目结构
