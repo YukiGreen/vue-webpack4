@@ -1,9 +1,15 @@
 const merge = require("webpack-merge");
 const baseConfig = require("./webpack.config.js");
+const resolveApp = require('./paths');
 
 const prodConfig = {
   mode: "production",
   devtool: "none",
+  output: {
+    filename: "js/[name].[chunkhash:5].js", // js 输出到 dist/js/xxx
+    publicPath: "./", // 公用的公共路径 /
+    path: resolveApp('./dist'), // 输出目录为 dist
+  },
   optimization: {
     splitChunks: {
       //分包配置

@@ -10,7 +10,7 @@ module.exports = {
   entry: "./src/main.js", // 获取入口配置
   output: {
     filename: "js/[name].[chunkhash:5].js", // js 输出到 dist/js/xxx
-    publicPath: "./", // 公用的公共路径 /
+    publicPath: "/", // 公用的公共路径 /开发环境使用‘/’，生产环境使用‘./’
     path: resolveApp('./dist'), // 输出目录为 dist
   },
   resolve: {
